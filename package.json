@@ -2,8 +2,6 @@
     "name": "@nlbo/n8n-nodes-nano-banana",
     "version": "1.2.0",
     "description": "n8n node for Nano Banana (Gemini) Image Generation",
-    "license": "MIT",
-    "homepage": "",
     "keywords": [
         "n8n-community-node-package",
         "n8n-node",
@@ -11,17 +9,23 @@
         "aigc",
         "image-generation"
     ],
+    "homepage": "https://github.com/Nlbo/n8n-nodes-nano-banana#readme",
+    "bugs": {
+        "url": "https://github.com/Nlbo/n8n-nodes-nano-banana/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nlbo/n8n-nodes-nano-banana.git"
+    },
+    "license": "MIT",
     "author": {
         "name": "Erik Nalbandyan",
         "email": "erik.nalbandyan.work@adobe.com"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/RongleCat/n8n-nodes-nano-banana.git"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
+    "type": "commonjs",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "n8n-node build",
         "build:watch": "tsc --watch",
@@ -30,19 +34,6 @@
         "lint:fix": "n8n-node lint --fix",
         "release": "n8n-node release",
         "prepublishOnly": "n8n-node prerelease"
-    },
-    "files": [
-        "dist"
-    ],
-    "n8n": {
-        "n8nNodesApiVersion": 1,
-        "strict": true,
-        "credentials": [
-            "dist/credentials/NanoBananaApi.credentials.js"
-        ],
-        "nodes": [
-            "dist/nodes/NanoBanana/NanoBanana.node.js"
-        ]
     },
     "devDependencies": {
         "@n8n/node-cli": "*",
@@ -54,5 +45,18 @@
     },
     "peerDependencies": {
         "n8n-workflow": "*"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/credentials/NanoBananaApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/NanoBanana/NanoBanana.node.js"
+        ]
     }
 }
